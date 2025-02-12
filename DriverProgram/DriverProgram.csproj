@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\NS_Airplane\NS_Airplane.csproj" />
+    <ProjectReference Include="..\NS_HelicopterQuadcopter\NS_HelicopterQuadcopter.csproj" />
+    <ProjectReference Include="..\NS_Agricultural_MAV\NS_Agricultural_MAV.csproj" />
+    <ProjectReference Include="..\NS_Multirotor\NS_Multirotor.csproj" />
+    <ProjectReference Include="..\NS_UAV\NS_UAV.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
