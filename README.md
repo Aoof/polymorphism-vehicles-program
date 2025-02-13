@@ -10,6 +10,14 @@ This program demonstrates polymorphism with various vehicle types. The file stru
 - Once it finds a UAV object it compares the price with the current least and most expensive UAVs. (The reason why the result is accurate if the array contained any UAV object)
 - If the current minimum or maximum UAV is null, it will result in "No UAVs found" as expected.
 
+## Part 2 Reflection
+#### **The method `CopyFlyingObjects()` in the [DriverProgram_Part2](./DriverProgram_Part2/DriverProgram_Part2.cs) has accurate results because we do the following.**
+- Accepts an array of any flying objects. `object[]`
+- Goes through them and checks the type of each object.
+- Utilizes the copy constructor to create a new object of the same type.
+- Adds the new object to a new array.
+- Returns the new array of copied objects.
+
 ## File Structure
 - **DriverProgram**: Contains the main entry point and helper methods.
 - **NS_Airplane**: Defines the base Airplane class with properties such as Brand, Price, and HorsePower.
