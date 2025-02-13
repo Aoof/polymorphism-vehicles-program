@@ -1,11 +1,14 @@
-﻿namespace NS_Agricultural_MAV;
+﻿// Part: 1
+// Written by: Abdulrahman Mousa - 2437732
+
+namespace NS_Agricultural_MAV;
 
 using NS_UAV;
 
 public class AgriculturalDrone : UAV
 {
-    private string model = "";
-    private double size = 0;
+    protected string model = "";
+    protected double size = 0;
 
     public string Model
     {

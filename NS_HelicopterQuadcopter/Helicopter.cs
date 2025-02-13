@@ -1,12 +1,15 @@
-﻿namespace NS_HelicopterQuadcopter;
+﻿// Part: 1
+// Written by: Abdulrahman Mousa - 2437732
+
+namespace NS_HelicopterQuadcopter;
 
 using NS_Airplane;
 
 public class Helicopter : Airplane
 {
-    private int numberOfCylinders;
-    private int creationYear;
-    private int passengerCapacity;
+    protected int numberOfCylinders;
+    protected int creationYear;
+    protected int passengerCapacity;
 
     public int NumberOfCylinders
     {

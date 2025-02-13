@@ -1,11 +1,14 @@
-﻿namespace NS_Agricultural_MAV;
+﻿// Part: 1
+// Written by: Abdulrahman Mousa - 2437732
+
+namespace NS_Agricultural_MAV;
 
 using NS_UAV;
 
 public class MAV : UAV
 {
-    private string brand = "";
-    private int carryCapacity = 0;
+    protected string brand = "";
+    protected int carryCapacity = 0;
 
     public string Brand
     {

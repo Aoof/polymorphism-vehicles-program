@@ -1,10 +1,13 @@
-﻿namespace NS_Multirotor;
+﻿// Part: 1
+// Written by: Abdulrahman Mousa - 2437732
+
+namespace NS_Multirotor;
 
 using NS_HelicopterQuadcopter;
 
 public class Multirotor : Helicopter
 {
-    private int numberOfRotors;
+    protected int numberOfRotors;
 
     public int NumberOfRotors
     {

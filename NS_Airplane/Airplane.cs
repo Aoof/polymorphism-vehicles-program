@@ -1,10 +1,13 @@
-﻿namespace NS_Airplane;
+﻿// Part: 1
+// Written by: Abdulrahman Mousa - 2437732
+
+namespace NS_Airplane;
 
 public class Airplane
 {
-    private string brand = "";
-    private double price = 0.0;
-    private int horsePower = 0;
+    protected string brand = "";
+    protected double price = 0.0;
+    protected int horsePower = 0;
 
     public string Brand
     {

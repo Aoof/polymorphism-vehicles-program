@@ -1,9 +1,12 @@
-﻿namespace NS_UAV;
+﻿// Part: 1
+// Written by: Abdulrahman Mousa - 2437732
+
+namespace NS_UAV;
 
 public class UAV
 {
-    private double weight = 0;
-    private double price = 0;
+    protected double weight = 0;
+    protected double price = 0;
 
     public double Weight
     {

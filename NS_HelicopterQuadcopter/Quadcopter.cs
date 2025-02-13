@@ -1,8 +1,11 @@
-﻿namespace NS_HelicopterQuadcopter;
+﻿// Part: 1
+// Written by: Abdulrahman Mousa - 2437732
+
+namespace NS_HelicopterQuadcopter;
 
 public class Quadcopter : Helicopter
 {
-    private int maxFlyingSpeed = 0;
+    protected int maxFlyingSpeed = 0;
 
     public int MaxFlyingSpeed
     {
