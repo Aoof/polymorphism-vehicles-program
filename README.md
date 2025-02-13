@@ -99,11 +99,5 @@ classDiagram
 ```
 
 ## Running the Application
-1. Open the solution in Visual Studio or your preferred IDE.
-2. Alternatively, run the application from the command line:
-   - Navigate to the solution directory.
-   - Execute:
-     ```bash
-     dotnet run --project DriverProgram
-     ```
-3. The application creates various vehicle objects and demonstrates the use of overridden methods and polymorphism.
+1. To run part 1 just execute the command: `dotnet run --project DriverProgram`
+2. To run part 2 just execute the command: `dotnet run --project DriverProgram_Part2`
