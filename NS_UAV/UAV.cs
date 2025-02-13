@@ -40,7 +40,7 @@ public class UAV
 
     public override string ToString()
     {
-        return $"This {this.GetType().FullName} weighs {Weight} kg and costs {Price:C}";
+        return $"This {this.GetType().Name} weighs {Weight} kg and costs {Price:C}";
     }
 
     public override bool Equals(object? obj)

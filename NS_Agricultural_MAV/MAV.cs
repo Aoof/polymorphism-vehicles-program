@@ -24,7 +24,7 @@ public class MAV : UAV
 
     public MAV() : base()
     {
-        Brand = "Unknown";
+        Brand = "An Unknown Brand";
         CarryCapacity = 2;
     }
 
@@ -42,7 +42,7 @@ public class MAV : UAV
 
     public override string ToString()
     {
-        return base.ToString() + $", is a {this.GetType().FullName} manufactured by {Brand}, and can carry {CarryCapacity} kg";
+        return base.ToString() + $", is a {this.GetType().Name} manufactured by {Brand}, and can carry {CarryCapacity} kg";
     }
 
     public override bool Equals(object? obj)

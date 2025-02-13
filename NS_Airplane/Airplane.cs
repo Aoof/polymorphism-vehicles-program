@@ -29,7 +29,7 @@ public class Airplane
 
     public Airplane()
     {
-        Brand = "Unknown";
+        Brand = "An Unknown Brand";
         Price = 0.0;
         HorsePower = 0;
     }
@@ -50,7 +50,7 @@ public class Airplane
 
     public override string ToString()
     {
-        return $"This {this.GetType().FullName} is manufactured by {Brand}, costs {Price:C}, and has {HorsePower} HP";
+        return $"This {this.GetType().Name} is manufactured by {Brand}, costs {Price:C}, and has {HorsePower} HP";
     }
 
     public override bool Equals(object? obj)

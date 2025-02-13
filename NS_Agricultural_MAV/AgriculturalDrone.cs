@@ -24,7 +24,7 @@ public class AgriculturalDrone : UAV
 
     public AgriculturalDrone() : base()
     {
-        Model = "Unknown";
+        Model = "An Unknown Model";
         Size = 1;
     }
 
@@ -42,7 +42,7 @@ public class AgriculturalDrone : UAV
 
     public override string ToString()
     {
-        return base.ToString() + $", is a {this.GetType().FullName} model {Model}, and has a size of {Size} m²";
+        return base.ToString() + $", is a {this.GetType().Name} model {Model}, and has a size of {Size} m²";
     }
 
     public override bool Equals(object? obj)

@@ -1,17 +1,26 @@
 # Polymorphism Vehicles Program
 
 ## Overview
-This solution demonstrates polymorphism within a vehicle context. The project is split into several sub-projects:
-- **DriverProgram**: Contains the main entry point.
-- **NS_Airplane**: Defines the base Airplane class.
-- **NS_HelicopterQuadcopter**: Contains Helicopter, Quadcopter classes.
-- **NS_Multirotor**: Contains the Multirotor class (inherits from Helicopter).
-- **NS_UAV**: Defines the base UAV class.
-- **NS_Agricultural_MAV**: Contains MAV and AgriculturalDrone classes (inherit from UAV).
+This program demonstrates polymorphism with various vehicle types. The file structure is organized to highlight inheritance and method overriding.
 
-## Structure
-- The solution file (.sln) is at the project root.
-- Each project is contained within its respective folder.
+## Part 1 Reflection
+#### **The method `FindLeastAndMostExpensiveUAV()` in the [DriverProgram](./DriverProgram/DriverProgram.cs) has accurate results because we do the following.**
+- Accepts an array of any flying objects.
+- Goes through them and checks the type of each object.
+- Once it finds a UAV object it compares the price with the current least and most expensive UAVs. (The reason why the result is accurate if the array contained any UAV object)
+- If the current minimum or maximum UAV is null, it will result in "No UAVs found" as expected.
+
+## File Structure
+- **DriverProgram**: Contains the main entry point and helper methods.
+- **NS_Airplane**: Defines the base Airplane class with properties such as Brand, Price, and HorsePower.
+- **NS_HelicopterQuadcopter**: 
+  - Contains Helicopter (inherits from Airplane) with additional properties: NumberOfCylinders, CreationYear, and PassengerCapacity.
+  - Contains Quadcopter (inherits from Helicopter) with an extra property: MaxFlyingSpeed.
+- **NS_Multirotor**: Contains the Multirotor class (inherits from Helicopter) with the additional property NumberOfRotors.
+- **NS_UAV**: Defines the base UAV class with properties Weight and Price.
+- **NS_Agricultural_MAV**: 
+  - Contains MAV (inherits from UAV) with extra properties: Brand and CarryCapacity.
+  - Contains AgriculturalDrone (inherits from UAV) with additional properties: Model and Size.
 
 ## UML Diagram
 Below is a Mermaid UML diagram representing the structure:
@@ -81,7 +90,6 @@ classDiagram
   }
 ```
 
-
 ## Running the Application
 1. Open the solution in Visual Studio or your preferred IDE.
 2. Alternatively, run the application from the command line:
@@ -90,4 +98,4 @@ classDiagram
      ```bash
      dotnet run --project DriverProgram
      ```
-3. The application will display a "Hello World!" message as a basic proof-of-concept.
+3. The application creates various vehicle objects and demonstrates the use of overridden methods and polymorphism.
