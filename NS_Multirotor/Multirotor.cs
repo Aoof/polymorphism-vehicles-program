@@ -26,4 +26,21 @@ public class Multirotor : Helicopter
     {
         NumberOfRotors = multirotor.NumberOfRotors;
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + $", has {NumberOfRotors} rotors";
+    }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj == null || GetType() != obj.GetType())
+        {
+            return false;
+        }
+
+        Multirotor multirotor = (Multirotor)obj;
+
+        return base.Equals(obj) && NumberOfRotors == multirotor.NumberOfRotors;
+    }
 }

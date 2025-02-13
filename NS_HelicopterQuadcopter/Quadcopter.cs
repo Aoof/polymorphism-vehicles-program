@@ -24,4 +24,21 @@ public class Quadcopter : Helicopter
     {
         MaxFlyingSpeed = quadcopter.MaxFlyingSpeed;
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + $", has a max flying speed of {MaxFlyingSpeed} km/h";
+    }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj == null || GetType() != obj.GetType())
+        {
+            return false;
+        }
+
+        Quadcopter quadcopter = (Quadcopter)obj;
+
+        return base.Equals(obj) && MaxFlyingSpeed == quadcopter.MaxFlyingSpeed;
+    }
 }

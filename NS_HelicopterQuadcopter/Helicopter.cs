@@ -46,4 +46,21 @@ public class Helicopter : Airplane
         CreationYear = helicopter.CreationYear;
         PassengerCapacity = helicopter.PassengerCapacity;
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + $", has {NumberOfCylinders} cylinders, was created in {CreationYear}, and can carry {PassengerCapacity} passengers";
+    }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj == null || GetType() != obj.GetType())
+        {
+            return false;
+        }
+
+        Helicopter helicopter = (Helicopter)obj;
+
+        return base.Equals(obj) && NumberOfCylinders == helicopter.NumberOfCylinders && CreationYear == helicopter.CreationYear && PassengerCapacity == helicopter.PassengerCapacity;
+    }
 }

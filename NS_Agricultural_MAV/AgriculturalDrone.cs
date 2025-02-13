@@ -36,4 +36,21 @@ public class AgriculturalDrone : UAV
         Model = agriculturalDrone.Model;
         Size = agriculturalDrone.Size;
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + $", is a {this.GetType().FullName} model {Model}, and has a size of {Size} m²";
+    }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj == null || GetType() != obj.GetType())
+        {
+            return false;
+        }
+
+        AgriculturalDrone agriculturalDrone = (AgriculturalDrone)obj;
+        double tolerance = 0.0001;
+        return base.Equals(obj) && Model == agriculturalDrone.Model && Math.Abs(Size - agriculturalDrone.Size) < tolerance;
+    }
 }

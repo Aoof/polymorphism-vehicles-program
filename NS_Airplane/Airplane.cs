@@ -44,4 +44,21 @@ public class Airplane
         Price = airplane.Price;
         HorsePower = airplane.HorsePower;
     }
+
+    public override string ToString()
+    {
+        return $"This {this.GetType().FullName} is manufactured by {Brand}, costs {Price:C}, and has {HorsePower} HP";
+    }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj == null || GetType() != obj.GetType())
+        {
+            return false;
+        }
+
+        Airplane airplane = (Airplane)obj;
+        const double tolerance = 0.0001;
+        return Brand == airplane.Brand && Math.Abs(Price - airplane.Price) < tolerance && HorsePower == airplane.HorsePower;
+    }
 }

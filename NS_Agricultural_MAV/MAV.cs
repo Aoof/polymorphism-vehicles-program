@@ -36,4 +36,20 @@ public class MAV : UAV
         Brand = mav.Brand;
         CarryCapacity = mav.CarryCapacity;
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + $", is a {this.GetType().FullName} manufactured by {Brand}, and can carry {CarryCapacity} kg";
+    }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj == null || GetType() != obj.GetType())
+        {
+            return false;
+        }
+
+        MAV mav = (MAV)obj;
+        return base.Equals(obj) && Brand == mav.Brand && CarryCapacity == mav.CarryCapacity;
+    }
 }

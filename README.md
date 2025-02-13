@@ -18,67 +18,69 @@ Below is a Mermaid UML diagram representing the structure:
 
 ```mermaid
 classDiagram
-    class Airplane {
-        - string brand
-        - double price
-        - int horsePower
-        + Airplane()
-        + Airplane(string, double, int)
-        + Airplane(Airplane)
-    }
+  NS_Airplane.Airplane <|-- NS_HelicopterQuadcopter.Helicopter
+  NS_HelicopterQuadcopter.Helicopter <|-- NS_HelicopterQuadcopter.Quadcopter
+  NS_HelicopterQuadcopter.Helicopter <|-- NS_Multirotor.Multirotor
+  NS_UAV.UAV <|-- NS_Agricultural_MAV.MAV
+  NS_UAV.UAV <|-- NS_Agricultural_MAV.AgriculturalDrone
 
-    class Helicopter {
-        - int numberOfCylinders
-        - int creationYear
-        - int passengerCapacity
-        + Helicopter()
-        + Helicopter(string, double, int, int, int, int)
-        + Helicopter(Helicopter)
-    }
-    Airplane <|-- Helicopter
+  class NS_Airplane.Airplane {
+    - string brand
+    - double price
+    - int horsePower
+    + Airplane()
+    + Airplane(string, double, int)
+    + Airplane(Airplane)
+  }
 
-    class Quadcopter {
-        - int maxFlyingSpeed
-        + Quadcopter()
-        + Quadcopter(string, double, int, int, int, int, int)
-        + Quadcopter(Quadcopter)
-    }
-    Helicopter <|-- Quadcopter
+  class NS_HelicopterQuadcopter.Helicopter {
+    - int numberOfCylinders
+    - int creationYear
+    - int passengerCapacity
+    + Helicopter()
+    + Helicopter(string, double, int, int, int, int)
+    + Helicopter(Helicopter)
+  }
 
-    class Multirotor {
-        - int numberOfRotors
-        + Multirotor()
-        + Multirotor(string, double, int, int, int, int, int)
-        + Multirotor(Multirotor)
-    }
-    Helicopter <|-- Multirotor
+  class NS_HelicopterQuadcopter.Quadcopter {
+    - int maxFlyingSpeed
+    + Quadcopter()
+    + Quadcopter(string, double, int, int, int, int, int)
+    + Quadcopter(Quadcopter)
+  }
 
-    class UAV {
-        - double weight
-        - double price
-        + UAV()
-        + UAV(double, double)
-        + UAV(UAV)
-    }
+  class NS_Multirotor.Multirotor {
+    - int numberOfRotors
+    + Multirotor()
+    + Multirotor(string, double, int, int, int, int, int)
+    + Multirotor(Multirotor)
+  }
 
-    class MAV {
-        - string brand
-        - int carryCapacity
-        + MAV()
-        + MAV(double, double, string, int)
-        + MAV(MAV)
-    }
-    UAV <|-- MAV
+  class NS_UAV.UAV {
+    - double weight
+    - double price
+    + UAV()
+    + UAV(double, double)
+    + UAV(UAV)
+  }
 
-    class AgriculturalDrone {
-        - string model
-        - double size
-        + AgriculturalDrone()
-        + AgriculturalDrone(double, double, string, double)
-        + AgriculturalDrone(AgriculturalDrone)
-    }
-    UAV <|-- AgriculturalDrone
+  class NS_Agricultural_MAV.MAV {
+    - string brand
+    - int carryCapacity
+    + MAV()
+    + MAV(double, double, string, int)
+    + MAV(MAV)
+  }
+
+  class NS_Agricultural_MAV.AgriculturalDrone {
+    - string model
+    - double size
+    + AgriculturalDrone()
+    + AgriculturalDrone(double, double, string, double)
+    + AgriculturalDrone(AgriculturalDrone)
+  }
 ```
+
 
 ## Running the Application
 1. Open the solution in Visual Studio or your preferred IDE.

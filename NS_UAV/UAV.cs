@@ -34,4 +34,21 @@ public class UAV
         Weight = uav.Weight;
         Price = uav.Price;
     }
+
+    public override string ToString()
+    {
+        return $"This {this.GetType().FullName} weighs {Weight} kg and costs {Price:C}";
+    }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj == null || GetType() != obj.GetType())
+        {
+            return false;
+        }
+
+        UAV uav = (UAV)obj;
+        double tolerance = 0.0001;
+        return Math.Abs(Weight - uav.Weight) < tolerance && Math.Abs(Price - uav.Price) < tolerance;
+    }
 }
