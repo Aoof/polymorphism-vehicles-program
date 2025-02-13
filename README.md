@@ -11,7 +11,7 @@ This program demonstrates polymorphism with various vehicle types. The file stru
 - If the current minimum or maximum UAV is null, it will result in "No UAVs found" as expected.
 
 ## Part 2 Reflection
-#### **The method `CopyFlyingObjects()` in the [DriverProgram_Part2](./DriverProgram_Part2/DriverProgram_Part2.cs) has accurate results because we do the following.**
+#### **The method `CopyFlyingObjects()` in the [DriverProgram_Part2](./DriverProgram_Part2/DriverProgram.cs) has accurate results because we do the following.**
 - Accepts an array of any flying objects. `object[]`
 - Goes through them and checks the type of each object.
 - Utilizes the copy constructor to create a new object of the same type.
