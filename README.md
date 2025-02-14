@@ -19,7 +19,8 @@ This program demonstrates polymorphism with various vehicle types. The file stru
 - Returns the new array of copied objects.
 
 ## File Structure
-- **DriverProgram**: Contains the main entry point and helper methods.
+- **DriverProgram**: Contains the main entry point and a helper method for part 1.
+- **DriverProgram_Part2**: Contains the main entry point and a helper method for part 2.
 - **NS_Airplane**: Defines the base Airplane class with properties such as Brand, Price, and HorsePower.
 - **NS_HelicopterQuadcopter**: 
   - Contains Helicopter (inherits from Airplane) with additional properties: NumberOfCylinders, CreationYear, and PassengerCapacity.
